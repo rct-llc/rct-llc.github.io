@@ -1,5 +1,15 @@
 h1 {
   font-size: 3em;
+  color: $text;
+}
+
+html {
+// body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
 }
 
 // .red {
@@ -9,3 +19,23 @@ h1 {
 // .green {
 //   color: #0f0
 // }
+
+.bg-gradient {
+  background: linear-gradient(164deg, $black, $light-black);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.bg-purple {
+  background: $purple;
+  width: 100%;
+  // flex: 0 1 auto;
+}
+
+.description {
+  color: hsl(278.18,11.83%,81.76%);
+  width: 100%;
+  // flex: 0 1 auto;
+}
