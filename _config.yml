@@ -30,7 +30,7 @@ twitter_username: "_rct0"
 github_username: rct-llc
 
 # Build settings
-theme: minima
+# theme: minima
 # plugins:
   # - jekyll-feed
 
@@ -53,3 +53,7 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+sass:
+  style: compressed
+  sass_dir: _sass
