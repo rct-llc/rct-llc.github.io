@@ -2,23 +2,23 @@
   "base": {
     "name": "Bitcoin Self Custody Wallet Access Log",
     "url": "https://www.amazon.com/dp/B0BW23RYF6",
-    "image": "/assets/images/bsc-wal-base-cover.png"
+    "image": "/assets/images/bitcoin-self-custody-wallet-access-log.png"
   },
   "decoys": [
     {
       "name": "U.S. Constitution",
       "url": "https://www.amazon.com/dp/B0BYLRVQZW",
-      "image": "/assets/images/constitution-cover.png"
+      "image": "/assets/images/us-constitution.png"
     },
     {
       "name": "History of the Federal Reserve",
       "url": "https://www.amazon.com/dp/B0BYM6QR22",
-      "image": "/assets/images/fed-reserve-cover.png"
+      "image": "/assets/images/history-of-the-federal-reserve.png"
     },
     {
       "name": "Keynesian Economics",
       "url": "https://www.amazon.com/dp/B0BYLRVR12",
-      "image": "/assets/images/keynesian-econ.png"
+      "image": "/assets/images/keynesian-economics.png"
     }
   ]
 }
