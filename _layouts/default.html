@@ -52,12 +52,12 @@
       </p>
     </div>
 
-    <div class="flex flex-column flex-row-m flex-row-l pa2">
+    <div class="flex flex-column flex-row-l pa2 justify-around">
       {% assign decoy_books = site.data.wal[page.decoy_books] %}
       {% for decoy in decoy_books %}
-        <div class="w-33 w-50-ns tc">
+        <div class="w-100 w-33-l tc description">
           {{ decoy.name }}
-          <div class="bg-purple mw5-m mw6 w-75-ns pa3 mha">
+          <div class="bg-purple mw5-m mw6 pa3 mha">
             <a href="{{ decoy.url }}">
               <img class="mw5 mw4-m shadow-2" src="{{ decoy.image | relative_url }}" alt="{{ decoy.name }}: Decoy Cover - Bitcoin Self Custody Wallet Access Log book cover">
             </a>
