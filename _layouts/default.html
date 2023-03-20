@@ -6,24 +6,70 @@
     {% include scripts.html %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" type="text/css">
   </head>
-  <body class="bg-gradient">
-    <div>
-      <h1>Bitcoin Self Custody Wallet Access Log</h1>
+  <body class="bg-gradient pa2">
+    <div class="tc">
+      <h1 class="f2 f1-m f-subheadline-l lh-title sans-serif">Bitcoin Self Custody<br>Wallet Access Log</h1>
     </div>
-    <div class="d-flex">
-      <div class="bg-purple">
-
+    <div class="flex flex-column flex-row-m flex-row-l pa2">
+      <div class="w-50-ns tc">
+        <div class="bg-purple mw5-m mw6 w-75-ns pa3 mha">
+          {% assign base_book = site.data.wal[page.base_book] %}
+          <a href="{{ base_book.url }}">
+            <img class="mw5 mw4-m shadow-2" src="{{ base_book.image | relative_url }}" alt="Bitcoin Self Custody Wallet Access Log book cover">
+          </a>
+        </div>
+        <div>
+          <a class="f3 link dim br3 pa3 dib white bg-orange mt3" href="{{ base_book.url }}">Buy now</a>
+          <br>
+          <span class="description">through Amazon</span>
+        </div>
       </div>
 
-      <div class="description">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu pellentesque velit. Proin nec feugiat metus. Etiam molestie ante nisl, at consequat felis faucibus et. Fusce consectetur lacinia tellus rutrum viverra. Nam facilisis nisi nec leo laoreet cursus. Cras non mauris sit amet ante ultricies mollis eget nec elit. Nunc augue nulla, elementum dignissim erat pretium, posuere porta dolor. Nulla luctus tempus erat, vitae sollicitudin neque dictum id. Cras feugiat ac augue eu ultricies.
+      <div class="description w-50-ns">
+        <h2 class="f3 f2-l lh-title">
+          If you died today, could your family successfully recover your Bitcoin?
+        </h2>
 
-         <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-         </ul>
+        <p class="f4 f3-l lh-copy">
+          The <i>Bitcoin Self Custody Wallet Access Log</i> is the tool you need to document all the steps necessary to <strong>access</strong>, <strong>spend</strong> and <strong>recover</strong> your BTC.
+        </p>
+
+        <p class="f4 f3-l lh-copy">
+          Don't lose your sats forever.
+        </p>
+
+
       </div>
     </div>
+
+    <div class="tc description">
+      <h2 class="f3 f2-l lh-title">
+        Decoy covers available for extra concealment
+      </h2>
+
+      <p class="f4 f3-l lh-copy">
+        The contents of each book are identical.
+      </p>
+    </div>
+
+    <div class="flex flex-column flex-row-m flex-row-l pa2">
+      {% assign decoy_books = site.data.wal[page.decoy_books] %}
+      {% for decoy in decoy_books %}
+        <div class="w-33 w-50-ns tc">
+          {{ decoy.name }}
+          <div class="bg-purple mw5-m mw6 w-75-ns pa3 mha">
+            <a href="{{ decoy.url }}">
+              <img class="mw5 mw4-m shadow-2" src="{{ decoy.image | relative_url }}" alt="{{ decoy.name }}: Decoy Cover - Bitcoin Self Custody Wallet Access Log book cover">
+            </a>
+          </div>
+          <div class="sticky-ns">
+            <a class="f3 link dim br3 pa3 dib white bg-orange mt3" href="{{ decoy.url }}">Buy now</a>
+            <br>
+            <span class="description">through Amazon</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
   </body>
 </html>
