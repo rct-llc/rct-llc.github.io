@@ -16,58 +16,61 @@ body {
 }
 
 .showcase {
+  min-height: 520px;
   margin-top: -45px;
   margin-bottom: -45px;
+  // flex-shrink: 0;
+  // height: 550px;
 }
 
 .cta-button {
-  background: linear-gradient(0deg, $orange-500, $orange-400);
+  background: linear-gradient(0deg, $orange-600, $orange-400);
 }
 
 .bg-purple-gradient {
-  // background: fixed linear-gradient(25deg, $purple-800, $purple-1000);
-  // background: fixed linear-gradient(0deg, $purple-1000, $black);
-  // hsl(258, 100%, 4%)
   background: fixed linear-gradient(45deg, $dark-purple-100, $dark-purple-200);
 }
+
 .bg-banner-purple-gradient {
-  // background: linear-gradient(90deg, $purple-1000, $purple-800);
-  // background: linear-gradient(90deg, adjust-color($purple-1000, $alpha: 0.80), adjust-color($purple-800, $alpha: 0.80));
   background: linear-gradient(90deg, alpha($purple-1000, 0.89), alpha($purple-800, 0.89));
-  // box-shadow: inset -45px -15px 13px 5px $red-500;
   border-top: 1px solid $purple-500;
   border-bottom: 1px solid $purple-500;
-
 }
-// .bg-banner-red-gradient {
-//   background: linear-gradient(90deg, $red-500, $pink-500);
-// }
+
+.bg-description-card {
+  // background: linear-gradient(180deg, alpha($pink-500, 0.89), alpha($purple-800, 0.89));
+  // background: linear-gradient(0deg, alpha($black, 0.89), alpha($light-black, 0.89));
+  background: fixed linear-gradient(0deg, alpha($dark-purple-100, 0.89), alpha($dark-purple-200, 0.89));
+  // border: 1px solid $purple-500;
+
+  border-radius: 6px;
+}
+
+.teal {
+  color: $teal-300;
+}
 
 .svg {
+  transform: rotate(90deg);
   background-image: url("/assets/images/oooscillate.svg");
   background-repeat: no-repeat;
-  // background-position: center;
-  background-size: cover;
-  // z-index: 1;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-
-// .center-content {
-//   max-width:
-// }
-
-.d-flex {
-  display: flex;
+.page-title {
+  color: $teal-300;
+  text-shadow: $teal-500 3px 3px 18px;
 }
 
 .bg-purple {
-  // background: $purple;
-  // background: linear-gradient(164deg, $purple, $teal);
-  // background: radial-gradient($purple, $teal);
-  background: radial-gradient($teal, $purple);
-  // width: 100%;
-  // flex: 0 1 auto;
-  border-radius: 3%;
+  background: radial-gradient($teal-500, $purple);
+  border-radius: 6px;
   border: 1px solid $purple-500;
 }
 
@@ -76,37 +79,15 @@ body {
   margin-right: auto;
 }
 
-.bscwal {
-  // width: 275px;
-  // max-width: 300px;
-  // border: 2px white;
-}
-
 .description {
   color: $text;
 }
+
 .text {
   color: $text;
 }
 
 .teal-glow {
-  // box-shadow: 5px 5px 2px 7px $teal;
-  box-shadow: 5px 5px 25px 5px $teal;
-  // box-shadow: inset -25px -25px 33px -15px $teal;
-  border-radius: 3px;
+  box-shadow: 0px 0px 15px 0px $teal-500;
+  // border-radius: 0px;
 }
-
-// @custom-media --breakpoint-not-small screen and (min-width: 30em);
-
-// @media (--breakpoint-not-small) {
-//   .not-flex-ns {
-//     display: block !important;
-//   }
-// }
-
-// @media (--breakpoint--not-small) {
-//   .sticky-ns { position: sticky; }
-// }
-// .sticky-ns {
-//   bottom: 10px;
-// }
