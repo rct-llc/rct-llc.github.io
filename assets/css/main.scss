@@ -1,8 +1,16 @@
 ---
 ---
 
+@function alpha($color, $opacity) {
+  $hue: hue($color);
+  $saturation: saturation($color);
+  $lightness: lightness($color);
+  @return hsla($hue, $saturation, $lightness, $opacity);
+}
+
+
 // @import "normalize";
 @import "colors";
 
-@import "theme";
 @import "tachyons";
+@import "theme";
