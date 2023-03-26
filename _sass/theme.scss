@@ -4,10 +4,11 @@ html {
 
 body {
   margin: 0;
-}
 
-.bg-gradient {
-  background: fixed linear-gradient(24deg, $black, $light-black);
+  h1 {
+    color: $teal-300;
+    text-shadow: $teal-500 2px 2px 12px;
+  }
 }
 
 .showcase {
@@ -36,10 +37,6 @@ body {
   border-radius: 6px;
 }
 
-.teal {
-  color: $teal-300;
-}
-
 .svg {
   transform: rotate(90deg);
   background-image: url("/assets/images/oooscillate.svg");
@@ -53,11 +50,6 @@ body {
   z-index: -1;
 }
 
-.page-title {
-  color: $teal-300;
-  text-shadow: $teal-500 2px 2px 12px;
-}
-
 .bg-purple {
   background: radial-gradient($teal-500, $purple);
   border-radius: 6px;
@@ -67,10 +59,6 @@ body {
 .mha {
   margin-left: auto;
   margin-right: auto;
-}
-
-.description {
-  color: $text;
 }
 
 .title-text-color {
