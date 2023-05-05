@@ -72,3 +72,16 @@ body {
 .teal-glow {
   box-shadow: 0px 0px 15px 0px $teal-500;
 }
+
+
+
+// Menu stuff
+.options {
+  display: none;
+}
+
+.dropdown-button.dropdown-active + .options {
+  // &.dropdown-active + .options {
+    display: block; //absolute;
+  // }
+}
