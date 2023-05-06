@@ -98,5 +98,11 @@
       "flag": "🇳🇴",
       "domain": "www.amazon.nl"
     },
+    {
+      "country": "United States",
+      "identifier": "US",
+      "flag": "🇺🇸",
+      "domain": "www.amazon.com"
+    }
   ]
 }
