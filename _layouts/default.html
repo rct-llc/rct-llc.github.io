@@ -30,10 +30,10 @@
             </a>
             <span class="text-color">Available on Amazon for <strong>$9.97 USD</strong></span>
             <div class="intl-orders mha">
-              <button class="f4 link dib pa3 white bg-purple mv2 dropdown-button">
+              <!-- <button class="f4 link dib pa3 white bg-purple mv2 dropdown-button">
                 International orders 🌍
-              </button>
-              <ul class="options list">                
+              </button> -->
+              <ul class="options list">
                 {% for location in site.data.wal[page.international] %}
                   <li class="option">
                     <a href="https://{{ location.domain }}/dp/{{ base_book.asin }}">
@@ -48,7 +48,7 @@
 
         <div class="text-color pa2 mw6 mt4 mt0-ns">
           <h2 class="f3 f2-l lh-title measure title-text-color">
-            No Bitcoin self custody setup is complete without documentation.       
+            No Bitcoin self custody setup is complete without documentation.
           </h2>
 
           <p class="f4 f3-l lh-copy measure">
@@ -83,7 +83,7 @@
       <div class="tc">
         <h2 class="f3 f2-l lh-title title-text-color">
           Decoy covers available for extra concealment
-        </h2>        
+        </h2>
       </div>
       <div class="flex flex-column flex-row-ns pa2 justify-around mha mw8 items-center">
         {% assign decoy_books = site.data.wal[page.decoy_books] %}
@@ -102,20 +102,6 @@
                 Upgrade concealment
               </a>
               <span class="text-color">Available on Amazon for <strong>$9.97 USD</strong></span>
-              <div>
-                <button id="wal" class="f4 link dib pa3 white bg-purple mv2 dropdown-button">
-                  International orders 🌍
-                </button>
-                <ul class="options list">                
-                  {% for location in site.data.wal[page.international] %}
-                    <li class="option">
-                      <a href="https://{{ location.domain }}/dp/{{ decoy.asin }}">
-                        <span class="f3">{{ location.flag }}</span> Amazon {{ location.identifier }}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
             </div>
           </div>
         {% endfor %}
@@ -125,6 +111,36 @@
           The interior contents of each book are identical.
         </p>
       </div>
+    </div>
+    <div id="site-selector" class="bg-purple text-color flex flex-column ph3 pv1">
+      {% for location in site.data.wal[page.international] %}
+        <div class="options">
+          <div class="flex">
+            <div class="flex flex-column items-center mr2">
+              <span class="f3">{{ location.flag }}</span><br>
+              <span>{{ location.identifier }}</span>
+            </div>
+            <div class="f4">
+              Amazon {{ location.country }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="flex">
+        <div class="flex flex-column items-center mr2">
+          <span id="flag" class="f2">🇺🇸</span><br>
+          <span id="identifier">US</span>
+        </div>
+
+        <button id="site-selector-button" class="f4">
+          Set Amazon location
+          <svg viewBox="0 0 320 512" width="25" title="angle-up">
+            <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
     </div>
     <footer class="tc mv5">
       <div class="mv2 text-color">

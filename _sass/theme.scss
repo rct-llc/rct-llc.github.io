@@ -73,46 +73,81 @@ body {
   box-shadow: 0px 0px 15px 0px $teal-500;
 }
 
-
-.intl-orders {
-  position: relative;
+#site-selector-button svg {
+  transition: 0.25s;
 }
-// Menu stuff
+
 .options {
-  margin-top: 15px;
   display: none;
-  animation-name: out;
+}
+
+#site-selector {
+  position: fixed;
+  right: 50px;
+  bottom: 35px;
+  animation-name: in;
   animation-duration: 0.2s;
   animation-fill-mode: both;
-  -webkit-animation-name: out;
+  -webkit-animation-name: in;
   -webkit-animation-duration: 0.2s;
   -webkit-animation-fill-mode: both;
+
+  &.active {
+
+    min-height: 300px;
+
+    #site-selector-button svg {
+      transform: rotate(-180deg);
+    }
+
+    .options {
+      display: unset;
+    }
+
+  }
 }
 
-.dropdown-button.dropdown-active + .options {
+
+
+// .intl-orders {
+//   position: relative;
+// }
+// Menu stuff
+// .options {
+//   margin-top: 15px;
+//   display: none;
+//   animation-name: out;
+//   animation-duration: 0.2s;
+//   animation-fill-mode: both;
+//   -webkit-animation-name: out;
+//   -webkit-animation-duration: 0.2s;
+//   -webkit-animation-fill-mode: both;
+// }
+
+// .dropdown-button.dropdown-active + .options {
   // &.dropdown-active + .options {
     // display: relative;
-    display: inline-block;
-    position: absolute;
-    background: red;
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px 0px $dark-300;
+    // display: inline-block;
+    // position: absolute;
+    // background: red;
+    // border-radius: 6px;
+    // box-shadow: 0px 0px 8px 0px $dark-300;
 
     // top: 36px;
     // right: 50px;
     // top: 50px;
     // right: 50px;l
     // left: 50px;
-    max-height: 250px;
-    width: 200px;
-    animation-name: in;
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
-    -webkit-animation-name: in;
-    -webkit-animation-duration: 0.2s;
-    -webkit-animation-fill-mode: both;
+    // max-height: 250px;
+    // width: 200px;
+    // animation-name: in;
+    // animation-duration: 0.2s;
+    // animation-fill-mode: both;
+    // -webkit-animation-name: in;
+    // -webkit-animation-duration: 0.2s;
+    // -webkit-animation-fill-mode: both;
   // }
-}
+// }
 
 .option {
   // position: absolute;
