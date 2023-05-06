@@ -63,34 +63,16 @@
       "domain": "www.amazon.co.jp"
     },
     {
-      "country": "Brazil",
-      "identifier": "BR",
-      "flag": "🇧🇷",
-      "domain": "www.amazon.com.br"
-    },
-    {
       "country": "Canada",
       "identifier": "CA",
       "flag": "🇨🇦",
       "domain": "www.amazon.ca"
     },
     {
-      "country": "India",
-      "identifier": "IN",
-      "flag": "🇮🇳",
-      "domain": "www.amazon.in"
-    },
-    {
       "country": "Australia",
       "identifier": "AU",
       "flag": "🇦🇺",
       "domain": "www.amazon.com.au"
-    },
-    {
-      "country": "Mexico",
-      "identifier": "MX",
-      "flag": "🇲🇽",
-      "domain": "www.amazon.com.mx"
     },
     {
       "country": "Norway",
