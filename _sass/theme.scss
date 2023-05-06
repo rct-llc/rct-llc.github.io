@@ -74,14 +74,69 @@ body {
 }
 
 
-
+.intl-orders {
+  position: relative;
+}
 // Menu stuff
 .options {
+  margin-top: 15px;
   display: none;
+  animation-name: out;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  -webkit-animation-name: out;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
 }
 
 .dropdown-button.dropdown-active + .options {
   // &.dropdown-active + .options {
-    display: block; //absolute;
+    // display: relative;
+    display: inline-block;
+    position: absolute;
+    background: red;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 0px $dark-300;
+
+    // top: 36px;
+    // right: 50px;
+    // top: 50px;
+    // right: 50px;l
+    // left: 50px;
+    max-height: 250px;
+    width: 200px;
+    animation-name: in;
+    animation-duration: 0.2s;
+    animation-fill-mode: both;
+    -webkit-animation-name: in;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
   // }
+}
+
+.option {
+  // position: absolute;
+  // top: 0px;
+  // left: 0px;
+}
+
+
+@keyframes in {
+  from {
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes out {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
 }
