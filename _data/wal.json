@@ -103,6 +103,18 @@
       "identifier": "US",
       "flag": "🇺🇸",
       "domain": "www.amazon.com"
+    },
+    {
+      "country": "Sweden",
+      "identifier": "SE",
+      "flag": "🇸🇪",
+      "domain": "www.amazon.se"
+    },
+    {
+      "country": "Poland",
+      "identifier": "PL",
+      "flag": "🇵🇱",
+      "domain": "www.amazon.pl"
     }
   ]
 }
