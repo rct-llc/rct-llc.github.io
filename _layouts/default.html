@@ -29,18 +29,19 @@
               Finalize your setup
             </a>
             <span class="text-color">Available on Amazon for <strong>$9.97 USD</strong></span>
-            <div>
-              <button id="wal" class="f4 link dib pa3 white bg-purple mv2 dropdown-button">
+            <div class="intl-orders mha">
+              <button class="f4 link dib pa3 white bg-purple mv2 dropdown-button">
                 International orders 🌍
               </button>
-              <ul class="options">
-                <li class="option">
-                  <a href="#"><span class="f4">🇩🇪</span> DE</a>
-                </li>
-                <li class="option">
-                  <a href="#"><span class="f4">🇬🇧</span> UK</a>
-                </li>
-              </ul> 
+              <ul class="options list">                
+                {% for location in site.data.wal[page.international] %}
+                  <li class="option">
+                    <a href="https://{{ location.domain }}/dp/{{ base_book.asin }}">
+                      <span class="f3">{{ location.flag }}</span> Amazon {{ location.identifier }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
@@ -105,6 +106,15 @@
                 <button id="wal" class="f4 link dib pa3 white bg-purple mv2 dropdown-button">
                   International orders 🌍
                 </button>
+                <ul class="options list">                
+                  {% for location in site.data.wal[page.international] %}
+                    <li class="option">
+                      <a href="https://{{ location.domain }}/dp/{{ decoy.asin }}">
+                        <span class="f3">{{ location.flag }}</span> Amazon {{ location.identifier }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
               </div>
             </div>
           </div>
