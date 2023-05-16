@@ -72,3 +72,71 @@ body {
 .teal-glow {
   box-shadow: 0px 0px 15px 0px $teal-500;
 }
+
+#site-selector-button svg {
+  transition: 0.25s;
+}
+
+.options {
+  display: none;
+}
+
+#site-selector {
+  position: fixed;
+  right: 50px;
+  bottom: 35px;
+  animation-name: in;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  -webkit-animation-name: in;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+
+  background: linear-gradient(270deg, alpha($purple-1000, 0.89), alpha($purple-800, 0.89));
+  border: 1px solid $purple-500;
+
+  &.active {
+    #site-selector-text {
+      margin-top: 0.25rem;
+    }
+
+    min-height: 300px;
+
+    #site-selector-button svg {
+      transform: rotate(-180deg);
+    }
+
+    .options {
+      display: unset;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(270deg, alpha($purple-900, 0.93), alpha($purple-700, 0.96));
+      }
+    }
+    .options:not(.options:first-child,.options:last-child) {
+      border-top: 1px solid $purple-500;
+      border-bottom: 1px solid $purple-500;
+    }
+  }
+}
+
+@keyframes in {
+  from {
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}

@@ -12,3 +12,7 @@
 @import "colors";
 @import "tachyons.min.css";
 @import "theme";
+
+// tachyons override
+.dim:focus,.dim:hover{opacity:.8}
+.dim:active{opacity:.85;}

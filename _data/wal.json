@@ -1,24 +1,102 @@
 {
   "base": {
     "name": "Bitcoin Self Custody Wallet Access Log",
+    "asin": "B0BW23RYF6",
     "url": "https://www.amazon.com/dp/B0BW23RYF6",
     "image": "/assets/images/bitcoin-self-custody-wallet-access-log.jpg"
   },
   "decoys": [
     {
       "name": "U.S. Constitution",
+      "asin": "B0BYLRVQZW",
       "url": "https://www.amazon.com/dp/B0BYLRVQZW",
       "image": "/assets/images/decoy-us-constitution-bitcoin-self-custody-wallet-access-log.jpg"
     },
     {
       "name": "History of the Federal Reserve",
+      "asin": "B0BYM6QR22",
       "url": "https://www.amazon.com/dp/B0BYM6QR22",
       "image": "/assets/images/decoy-history-of-the-federal-reserve-bitcoin-self-custody-wallet-access-log.jpg"
     },
     {
       "name": "Keynesian Economics",
+      "asin": "B0BYLRVR12",
       "url": "https://www.amazon.com/dp/B0BYLRVR12",
       "image": "/assets/images/decoy-keynesian-economics-bitcoin-self-custody-wallet-access-log.jpg"
+    }
+  ],
+  "amazon_international": [
+    {
+      "country": "United Kingdom",
+      "identifier": "UK",
+      "flag": "🇬🇧",
+      "domain": "www.amazon.co.uk"
+    },
+    {
+      "country": "Germany",
+      "identifier": "DE",
+      "flag": "🇩🇪",
+      "domain": "www.amazon.de"
+    },
+    {
+      "country": "France",
+      "identifier": "FR",
+      "flag": "🇫🇷",
+      "domain": "www.amazon.fr"
+    },
+    {
+      "country": "Spain",
+      "identifier": "ES",
+      "flag": "🇪🇸",
+      "domain": "www.amazon.es"
+    },
+    {
+      "country": "Italy",
+      "identifier": "IT",
+      "flag": "🇮🇹",
+      "domain": "www.amazon.it"
+    },
+    {
+      "country": "Japan",
+      "identifier": "JP",
+      "flag": "🇯🇵",
+      "domain": "www.amazon.co.jp"
+    },
+    {
+      "country": "Canada",
+      "identifier": "CA",
+      "flag": "🇨🇦",
+      "domain": "www.amazon.ca"
+    },
+    {
+      "country": "Australia",
+      "identifier": "AU",
+      "flag": "🇦🇺",
+      "domain": "www.amazon.com.au"
+    },
+    {
+      "country": "Norway",
+      "identifier": "NL",
+      "flag": "🇳🇴",
+      "domain": "www.amazon.nl"
+    },
+    {
+      "country": "United States",
+      "identifier": "US",
+      "flag": "🇺🇸",
+      "domain": "www.amazon.com"
+    },
+    {
+      "country": "Sweden",
+      "identifier": "SE",
+      "flag": "🇸🇪",
+      "domain": "www.amazon.se"
+    },
+    {
+      "country": "Poland",
+      "identifier": "PL",
+      "flag": "🇵🇱",
+      "domain": "www.amazon.pl"
     }
   ]
 }

@@ -7,6 +7,7 @@
     <title>{{ site.title }}</title>
     {% include scripts.html %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" type="text/css">
+    <link rel="icon" href="/assets/images/favicon.ico">
   </head>
   <body class="bg-purple-gradient sans-serif">
     <div class="svg"></div>
@@ -20,12 +21,12 @@
         <div class="mw5-m mw6 tc ph0 bg-purple showcase h6 flex-m flex-column-m justify-center-m">
           <div class="pa3 mha mt3">
             {% assign base_book = site.data.wal[page.base_book] %}
-            <a href="{{ base_book.url }}" referrerpolicy="no-referrer" target="_blank">
+            <a href="{{ base_book.url }}" class="swap-link" referrerpolicy="no-referrer" target="_blank">
               <img class="mw5 mw4-m teal-glow shadow-2" src="{{ base_book.image | relative_url }}" alt="Bitcoin Self Custody Wallet Access Log book cover">
             </a>
           </div>
           <div>
-            <a class="f3 link db mh3 dim br3 pa3 white cta-button mv2" href="{{ base_book.url }}" referrerpolicy="no-referrer" target="_blank">
+            <a class="f3 link db mh3 dim br3 pa3 white cta-button mv2 swap-link" href="{{ base_book.url }}" referrerpolicy="no-referrer" target="_blank">
               Finalize your setup
             </a>
             <span class="text-color">Available on Amazon for <strong>$9.97 USD</strong></span>
@@ -34,7 +35,7 @@
 
         <div class="text-color pa2 mw6 mt4 mt0-ns">
           <h2 class="f3 f2-l lh-title measure title-text-color">
-            No Bitcoin self custody setup is complete without documentation.       
+            No Bitcoin self custody setup is complete without documentation.
           </h2>
 
           <p class="f4 f3-l lh-copy measure">
@@ -69,7 +70,7 @@
       <div class="tc">
         <h2 class="f3 f2-l lh-title title-text-color">
           Decoy covers available for extra concealment
-        </h2>        
+        </h2>
       </div>
       <div class="flex flex-column flex-row-ns pa2 justify-around mha mw8 items-center">
         {% assign decoy_books = site.data.wal[page.decoy_books] %}
@@ -79,12 +80,12 @@
               <h3 class="lh-title title-text-color">
                 Decoy title<br>{{ decoy.name }}
               </h3>
-              <a href="{{ decoy.url }}" referrerpolicy="no-referrer" target="_blank">
+              <a href="{{ decoy.url }}" class="swap-link" referrerpolicy="no-referrer" target="_blank">
                 <img class="mw5 mw4-m shadow-2 teal-glow" src="{{ decoy.image | relative_url }}" alt="{{ decoy.name }}: Decoy Cover - Bitcoin Self Custody Wallet Access Log book cover">
               </a>
             </div>
             <div>
-              <a class="f3 link db mh3 dim br3 pa3 white cta-button mv2" href="{{ decoy.url }}" referrerpolicy="no-referrer" target="_blank">
+              <a class="f3 link db mh3 dim br3 pa3 white cta-button mv2 swap-link" href="{{ decoy.url }}" referrerpolicy="no-referrer" target="_blank">
                 Upgrade concealment
               </a>
               <span class="text-color">Available on Amazon for <strong>$9.97 USD</strong></span>
@@ -97,6 +98,37 @@
           The interior contents of each book are identical.
         </p>
       </div>
+    </div>
+    <div id="site-selector" class="bg-location-select-purple-gradient text-color flex flex-column ph3 pv1">
+      {% assign countries = site.data.wal["amazon_international"] | sort: 'country' %}
+      {% for location in countries %}
+        <div class="options" data-domain="{{ location.domain }}" data-identifier="{{ location.identifier }}" title="Amazon {{ location.country }}">
+          <div class="flex items-center">
+            <div class="flex flex-column items-center ml2 mr3">
+              <span class="f3">{{ location.flag }}</span><br>
+              <span>{{ location.identifier }}</span>
+            </div>
+            <div class="f4">
+              {{ location.country }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <div id="site-selector-text" class="flex">
+        <div class="flex flex-column items-center mr2">
+          <span id="flag" class="f2">🇺🇸</span><br>
+          <span id="identifier">US</span>
+        </div>
+
+        <button id="site-selector-button" class="f4 flex items-center bg-purple dim link">
+          <span class="mr2 text-color">Set Amazon location</span>
+          <svg viewBox="0 0 320 512" width="25" fill="#e7d4f2" title="arrow-up">
+            <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
     </div>
     <footer class="tc mv5">
       <div class="mv2 text-color">
