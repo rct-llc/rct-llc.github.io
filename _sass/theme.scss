@@ -92,7 +92,13 @@ body {
   -webkit-animation-duration: 0.2s;
   -webkit-animation-fill-mode: both;
 
+  background: linear-gradient(270deg, alpha($purple-1000, 0.89), alpha($purple-800, 0.89));
+  border: 1px solid $purple-500;
+
   &.active {
+    #site-selector-text {
+      margin-top: 0.25rem;
+    }
 
     min-height: 300px;
 
@@ -102,59 +108,17 @@ body {
 
     .options {
       display: unset;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(270deg, alpha($purple-900, 0.93), alpha($purple-700, 0.96));
+      }
     }
-
+    .options:not(.options:first-child,.options:last-child) {
+      border-top: 1px solid $purple-500;
+      border-bottom: 1px solid $purple-500;
+    }
   }
 }
-
-
-
-// .intl-orders {
-//   position: relative;
-// }
-// Menu stuff
-// .options {
-//   margin-top: 15px;
-//   display: none;
-//   animation-name: out;
-//   animation-duration: 0.2s;
-//   animation-fill-mode: both;
-//   -webkit-animation-name: out;
-//   -webkit-animation-duration: 0.2s;
-//   -webkit-animation-fill-mode: both;
-// }
-
-// .dropdown-button.dropdown-active + .options {
-  // &.dropdown-active + .options {
-    // display: relative;
-    // display: inline-block;
-    // position: absolute;
-    // background: red;
-    // border-radius: 6px;
-    // box-shadow: 0px 0px 8px 0px $dark-300;
-
-    // top: 36px;
-    // right: 50px;
-    // top: 50px;
-    // right: 50px;l
-    // left: 50px;
-    // max-height: 250px;
-    // width: 200px;
-    // animation-name: in;
-    // animation-duration: 0.2s;
-    // animation-fill-mode: both;
-    // -webkit-animation-name: in;
-    // -webkit-animation-duration: 0.2s;
-    // -webkit-animation-fill-mode: both;
-  // }
-// }
-
-.option {
-  // position: absolute;
-  // top: 0px;
-  // left: 0px;
-}
-
 
 @keyframes in {
   from {
@@ -165,6 +129,7 @@ body {
     opacity: 1;
   }
 }
+
 @keyframes out {
   from {
     transform: translate3d(0, 0, 0);
