@@ -94,6 +94,7 @@ body {
 
   background: linear-gradient(270deg, alpha($purple-1000, 0.89), alpha($purple-800, 0.89));
   border: 1px solid $purple-500;
+  border-radius: 6px;
 
   &.active {
     #site-selector-text {
