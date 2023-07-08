@@ -85,6 +85,7 @@ body {
   position: fixed;
   right: 50px;
   bottom: 35px;
+  // top: 25%;
   animation-name: in;
   animation-duration: 0.2s;
   animation-fill-mode: both;
@@ -95,29 +96,39 @@ body {
   background: linear-gradient(270deg, alpha($purple-1000, 0.89), alpha($purple-800, 0.89));
   border: 1px solid $purple-500;
   border-radius: 6px;
+  z-index: 10;
+
+  .options-wrapper {
+    // overflow-y: auto;
+  }
 
   &.active {
+    min-height: 300px;
+    // top: 25%;
+
     #site-selector-text {
       margin-top: 0.25rem;
     }
-
-    min-height: 300px;
 
     #site-selector-button svg {
       transform: rotate(-180deg);
     }
 
-    .options {
-      display: unset;
-      cursor: pointer;
-      &:hover {
-        background: linear-gradient(270deg, alpha($purple-900, 0.93), alpha($purple-700, 0.96));
+    // .options-wrapper{
+      .options {
+        display: unset;
+        cursor: pointer;
+        &:hover {
+          background: linear-gradient(270deg, alpha($purple-900, 0.93), alpha($purple-700, 0.96));
+        }
       }
-    }
-    .options:not(.options:first-child,.options:last-child) {
-      border-top: 1px solid $purple-500;
-      border-bottom: 1px solid $purple-500;
-    }
+    // }
+    // .options-wrapper {
+      .options:not(.options:first-child,.options:last-child) {
+        border-top: 1px solid $purple-500;
+        border-bottom: 1px solid $purple-500;
+      }
+    // }
   }
 }
 

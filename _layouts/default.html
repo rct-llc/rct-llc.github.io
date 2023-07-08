@@ -37,7 +37,8 @@
 
         <div class="text-color pa2 mw6 mt4 mt0-ns">
           <h2 class="f3 f2-l lh-title measure title-text-color">
-            No Bitcoin self custody setup is complete without documentation.
+            <!-- No Bitcoin self custody setup is complete without documentation -->
+            Fully complete your self custody setup
           </h2>
 
           <p class="f4 f3-l lh-copy measure">
@@ -73,7 +74,7 @@
 
         <div class="text-color pa2 mw6 mt4 mt0-ns">
           <h2 class="f3 f2-l lh-title measure title-text-color">
-            No Bitcoin self custody setup is complete without documentation.
+            Document crucial wallet details
           </h2>
 
           <p class="f4 f3-l lh-copy measure">
@@ -86,9 +87,8 @@
           </p>
         </div>
 
-        <div class="mw5-m mw6 tc ph0 bg-purple showcase h6 ">
+        <div class="mw5-m mw6 tc ph0 bg-purple showcase h6">
           <div class="pa3 mha">
-          <!-- <div> -->
             <div id="carouselInterior" class="carousel carousel-dark slide pa3" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselInterior" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -98,16 +98,16 @@
               </div>
               <div class="carousel-inner teal-glow shadow-2">
                 <div class="carousel-item active" data-bs-interval="6000">
-                  <img src="/assets/images/interior-description.png" class="db w-100">
+                  <img src="/assets/images/interior-description.png" alt="The interior of the Wallet Access Log describing the wallet." class="db w-100">
                 </div>
                 <div class="carousel-item" data-bs-interval="6000">
-                  <img src="/assets/images/interior-access.png" class="db w-100">
+                  <img src="/assets/images/interior-access.png" alt="The interior of the Wallet Access Log listing physical access steps." class="db w-100">
                 </div>
                 <div class="carousel-item" data-bs-interval="6000">
-                  <img src="/assets/images/interior-spending-utxos.png" class="db w-100">
+                  <img src="/assets/images/interior-spending-utxos.png" alt="The interior of the Wallet Access Log listing the steps to spend unspent transaction outputs (UTXOs)." class="db w-100">
                 </div>
                 <div class="carousel-item" data-bs-interval="6000">
-                  <img src="/assets/images/interior-recovery.png" class="db w-100">
+                  <img src="/assets/images/interior-recovery.png" alt="The interior of the Wallet Access Log listing the recovery steps to restore the wallet." class="db w-100">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterior" data-bs-slide="prev">
@@ -119,13 +119,35 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-
           </div>
+          <p class="text-color">
+            <!-- <span class="text-color">Available on Amazon for <strong>$9.97 USD</strong></span> -->
 
+            Example images of a well documented wallet. Complete each page of the log book to your threat level.
+          </p>
         </div>
-
-
       </div>
+    </div>
+
+
+    <div class="mv5 mha mw8 bg-description-card pa3 text-color">
+      <h2 class="f3 f2-l lh-title measure title-text-color">
+        Use cases
+      </h2>
+
+      <p class="f4 f3-l lh-copy">
+        Examples of using the <em>Wallet Access Log</em> include:
+        <!-- This <em>Wallet Access Log</em> book features: -->
+      </p>
+
+      <ul class="f4 f3-l lh-copy">
+        <li>Write as much or as little as you need.</li>
+        <li>Use multiple <em>Wallet Access Logs</em> to split the information needed to access your wallets.</li>
+        <li>Gift for that special bitcoiner in your life.</li>
+        <!-- <li>Fits in a standard bank safe deposit box of 5 inches wide (12.7 cm)</li> -->
+        <!-- <li>Measures 4.5 inches wide by 6 inches high (11.4 cm by 15.25 cm)</li> -->
+        <!-- <li>Made by bitcoiners for bitcoiners</li> -->
+      </ul>
     </div>
 
 
@@ -134,6 +156,14 @@
         <h2 class="f3 f2-l lh-title title-text-color">
           Decoy covers available for extra concealment
         </h2>
+
+        <p class="f4 f3-l lh-copy text-color">
+          Thwart would-be thieves with unsuspecting titles to keep your access log concealed from prying eyes.
+        </p>
+
+        <p class="f4 f3-l lh-copy text-color">
+          The interior contents of each logbook are identical.
+        </p>
       </div>
       <div class="flex flex-column flex-row-ns pa2 justify-around mha mw8 items-center">
         {% assign decoy_books = site.data.wal[page.decoy_books] %}
@@ -156,27 +186,24 @@
           </div>
         {% endfor %}
       </div>
-      <div class="tc">
-        <p class="f4 f3-l lh-copy text-color">
-          The interior contents of each logbook are identical.
-        </p>
-      </div>
     </div>
     <div id="site-selector" class="bg-location-select-purple-gradient text-color flex flex-column ph3 pv1">
-      {% assign countries = site.data.wal["amazon_international"] | sort: 'country' %}
-      {% for location in countries %}
-        <div class="options" data-domain="{{ location.domain }}" data-identifier="{{ location.identifier }}" title="Amazon {{ location.country }}">
-          <div class="flex items-center">
-            <div class="flex flex-column items-center ml2 mr3">
-              <span class="f3">{{ location.flag }}</span><br>
-              <span>{{ location.identifier }}</span>
-            </div>
-            <div class="f4">
-              {{ location.country }}
+      <!-- <div class="options-wrapper"> -->
+        {% assign countries = site.data.wal["amazon_international"] | sort: 'country' %}
+        {% for location in countries %}
+          <div class="options" data-domain="{{ location.domain }}" data-identifier="{{ location.identifier }}" title="Amazon {{ location.country }}">
+            <div class="flex items-center">
+              <div class="flex flex-column items-center ml2 mr3">
+                <span class="f3">{{ location.flag }}</span><br>
+                <span>{{ location.identifier }}</span>
+              </div>
+              <div class="f4">
+                {{ location.country }}
+              </div>
             </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      <!-- </div> -->
       <div id="site-selector-text" class="flex">
         <div class="flex flex-column items-center mr3">
           <span id="flag" class="f2">🇺🇸</span><br>
